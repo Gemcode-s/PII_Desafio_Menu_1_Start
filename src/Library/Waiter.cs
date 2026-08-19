@@ -5,6 +5,7 @@
 //------------------------------------------------------------------------------
 
 using System.Collections;
+using System.Collections.Generic;
 
 namespace Ucu.Poo.Restaurant
 {
@@ -14,5 +15,14 @@ namespace Ucu.Poo.Restaurant
     public class Waiter
     {
         private ArrayList assignedTables = new ArrayList();
+        public string Name {get; set;}
+        public void AssignTable(Table mesa)
+        {
+            assignedTables.Add(mesa);
+        }
+        public void TakeOrder(Table mesa, Dish plato)
+        {
+            mesa.AddToOrder(plato);
+        }
     }
 }
