@@ -5,6 +5,9 @@
 //------------------------------------------------------------------------------
 
 using System.Collections;
+using System.Collections.Generic;
+using System.Dynamic;
+using System.Globalization;
 
 namespace Ucu.Poo.Restaurant
 {
@@ -14,10 +17,39 @@ namespace Ucu.Poo.Restaurant
     public class Table
     {
         private ArrayList order = new ArrayList();
+        public int Number
+        {
+            get; set;
+        }
 
+        private bool isOccupied;
+        public bool IsOccupied
+        {
+            get { return this.isOccupied;}
+        }
+        public void Occupy()
+        {
+            this.isOccupied = true;
+        }
+        public void Free()
+        {
+            order.Clear();
+            this.isOccupied = false;
+        }
+        public void AddToOrder(Dish)
+        {
+            order.Add(Dish);
+        }
         public bool HasOrders()
         {
-            return this.order.Count > 0;
+            if (this.order.Count > 0)
+            {
+                return true
+            }
+            else
+            {
+                return false
+            }
         }
     }
 }
