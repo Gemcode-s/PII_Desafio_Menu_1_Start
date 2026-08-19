@@ -36,19 +36,19 @@ namespace Ucu.Poo.Restaurant
             order.Clear();
             this.isOccupied = false;
         }
-        public void AddToOrder(Dish)
+        public void AddToOrder(Dish plato)
         {
-            order.Add(Dish);
+            order.Add(plato);
         }
         public bool HasOrders()
         {
             if (this.order.Count > 0)
             {
-                return true
+                return true;
             }
             else
             {
-                return false
+                return false;
             }
         }
     }
