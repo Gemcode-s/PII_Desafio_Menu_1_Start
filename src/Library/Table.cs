@@ -16,6 +16,10 @@ namespace Ucu.Poo.Restaurant
     /// </summary>
     public class Table
     {
+        public Table(int number)
+        {
+            Number=number;
+        }
         private ArrayList order = new ArrayList();
         public int Number
         {
